@@ -12,12 +12,32 @@
     <Folder Include="$(MSBuildThisFileDirectory)Scenes\" />
     <Folder Include="$(MSBuildThisFileDirectory)Realm\" />
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
+    <Folder Include="$(MSBuildThisFileDirectory)SquareTheAdventure\" />
+    <Folder Include="$(MSBuildThisFileDirectory)SquareTheAdventure\Map\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Content\New Folder\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Scenes\GameScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Realm\PlayerData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Scenes\BattleScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Scenes\LoadScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Scenes\MainMenuScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SquareTheAdventure\Player.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SquareTheAdventure\Map\MapManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SquareTheAdventure\Map\TiledChunk.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SquareTheAdventure\Map\TiledData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SquareTheAdventure\Map\TiledLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SquareTheAdventure\Map\TiledMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SquareTheAdventure\Map\TiledObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SquareTheAdventure\Map\TiledObjectGroup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SquareTheAdventure\Map\TiledTile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SquareTheAdventure\Map\TiledTileset.cs" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Content\Map\A\A.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
