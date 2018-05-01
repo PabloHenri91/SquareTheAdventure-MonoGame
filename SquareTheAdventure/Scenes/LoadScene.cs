@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Hydra.Scenes
 {
@@ -19,6 +20,7 @@ namespace Hydra.Scenes
 
         public GameScene()
         {
+            Game1.samplerState = SamplerState.PointClamp;
             defaultSize = new Vector2(1280, 800);
             backgroundColor = new Color(22, 15, 38, 100);
         }

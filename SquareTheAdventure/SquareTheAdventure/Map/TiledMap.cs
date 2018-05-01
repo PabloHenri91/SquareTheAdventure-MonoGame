@@ -195,8 +195,6 @@ namespace SquareTheAdventure.Map
                     {
                         if (tile.gid > 0)
                         {
-                            tile.size = new Vector2(tilewidth, tileheight);
-
                             tile.position = new Vector2(
                                 (i % width) * tilewidth - size.X / 2,
                                 (i / height) * tileheight - size.Y / 2);

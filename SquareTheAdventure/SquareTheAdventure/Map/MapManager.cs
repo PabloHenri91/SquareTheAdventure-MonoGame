@@ -18,8 +18,8 @@ namespace SquareTheAdventure.Map
         bool loading;
         double lastUpdate;
 
-        private int x;
-        private int y;
+        int x;
+        int y;
 
         public MapManager(int x, int y)
         {
@@ -72,13 +72,13 @@ namespace SquareTheAdventure.Map
             }
         }
 
-        private void updatePlayerRegion(Vector2 position)
+        void updatePlayerRegion(Vector2 position)
         {
             playerRegion.X = (float)Math.Round(position.X / TiledMap.size.X, MidpointRounding.AwayFromZero);
             playerRegion.Y = (float)Math.Round(position.Y / TiledMap.size.Y, MidpointRounding.AwayFromZero);
         }
 
-        private void loadMap()
+        void loadMap()
         {
             if (playerRegion.X < loadedRegion.X)
             {
@@ -106,7 +106,7 @@ namespace SquareTheAdventure.Map
             }
         }
 
-        private void addChunks()
+        void addChunks()
         {
             foreach (TiledMap chunk in chunks)
             {
@@ -125,7 +125,7 @@ namespace SquareTheAdventure.Map
             }
         }
 
-        private void loadA()
+        void loadA()
         {
             chunks[2].removeFromParent();
             chunks[5].removeFromParent();
@@ -146,7 +146,7 @@ namespace SquareTheAdventure.Map
             addChunks();
         }
 
-        private void loadS()
+        void loadS()
         {
             chunks[0].removeFromParent();
             chunks[1].removeFromParent();
@@ -167,7 +167,7 @@ namespace SquareTheAdventure.Map
             addChunks();
         }
 
-        private void loadD()
+        void loadD()
         {
             chunks[0].removeFromParent();
             chunks[3].removeFromParent();
@@ -188,7 +188,7 @@ namespace SquareTheAdventure.Map
             addChunks();
         }
 
-        private void loadW()
+        void loadW()
         {
             chunks[6].removeFromParent();
             chunks[7].removeFromParent();
