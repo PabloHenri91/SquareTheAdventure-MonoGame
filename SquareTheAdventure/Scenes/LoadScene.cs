@@ -35,8 +35,14 @@ namespace Hydra.Scenes
             addChild(title);
 
             Label label;
-            label = new Label("Press Start", defaultSize.X / 2, defaultSize.Y / 2 + 300, SpriteFontName.KenPixel16);
-            label.setAlignment(HorizontalAlignment.center, VerticalAlignment.center);
+
+            label = new Label("Press Start", 
+                              defaultSize.X / 2,
+                              defaultSize.Y / 2 + 300,
+                              HorizontalAlignment.center,
+                              VerticalAlignment.center, 
+                              FontName.kenPixel, 
+                              FontSize.size16);
             addChild(label);
         }
 
