@@ -23,15 +23,6 @@ namespace Hydra.Scenes
             mapManager = new MapManager(0, 0);
             player = new Player();
 
-            Control control = new Control("null", defaultSize.X / 2, defaultSize.Y / 2)
-            {
-                color = Color.Transparent
-            };
-            control.setAlignment(HorizontalAlignment.center, VerticalAlignment.center);
-            addChild(control);
-
-            control.addChild(gameWorld);
-
             gameWorld.addChild(camera);
             gameWorld.addChild(mapManager);
             gameWorld.addChild(player);
