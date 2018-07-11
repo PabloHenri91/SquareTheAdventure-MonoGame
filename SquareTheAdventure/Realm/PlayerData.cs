@@ -7,10 +7,18 @@ namespace Hydra
     public class PlayerData : RealmObject
     {
         public int points { get; set; }
+    }
 
-        public PlayerData()
+    public static class MemoryCardExtension
+    {
+
+        public static PlayerData newPlayerData(this MemoryCard memoryCard)
         {
-            points = 0;
+            PlayerData playerData = memoryCard.insert<PlayerData>();
+
+            playerData.points = 0;
+
+            return playerData;
         }
     }
 }
