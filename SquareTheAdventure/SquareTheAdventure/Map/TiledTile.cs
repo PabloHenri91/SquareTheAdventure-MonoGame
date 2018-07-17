@@ -30,8 +30,6 @@ namespace SquareTheAdventure.Map
                     case "gid":
                         gid = int.Parse(tileAttribute.Value);
                         break;
-                    default:
-                        break;
                 }
             }
         }
@@ -49,6 +47,8 @@ namespace SquareTheAdventure.Map
                 if (gid > lastTileCount && gid <= tileCount)
                 {
                     texture2D = tileset.texture2D;
+
+                    size = new Vector2(tileset.tilewidth, tileset.tileheight);
 
                     int x = (gid - lastTileCount - 1) % (tileset.texture2D.Width / tileset.tilewidth) * tileset.tilewidth;
                     int y = (gid - lastTileCount - 1) / (tileset.texture2D.Height / tileset.tileheight) * tileset.tileheight;
