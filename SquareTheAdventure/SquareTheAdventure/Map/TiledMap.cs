@@ -208,8 +208,10 @@ namespace SquareTheAdventure.Map
                     {
                         foreach (TiledObject tiledObject in tiledObjectGroup.objectList)
                         {
-                            tiledObject.position.X = tiledObject.position.X - size.X / 2 + tiledObject.width / 2 - tilewidth / 2;
-                            tiledObject.position.Y = tiledObject.position.Y - size.Y / 2 + tiledObject.height / 2 - tileheight / 2;
+                            tiledObject.position = new Vector2(
+                                tiledObject.position.X - size.X / 2 + tiledObject.width / 2 - tilewidth / 2,
+                                tiledObject.position.Y - size.Y / 2 + tiledObject.height / 2 - tileheight / 2
+                            );
                             addChild(tiledObject);
                         }
                     }

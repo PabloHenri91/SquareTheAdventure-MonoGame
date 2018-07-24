@@ -32,10 +32,10 @@ namespace SquareTheAdventure.Map
                         id = int.Parse(objectAttribute.Value);
                         break;
                     case "x":
-                        position.X = int.Parse(objectAttribute.Value);
+                        position = new Vector2(int.Parse(objectAttribute.Value), position.Y);
                         break;
                     case "y":
-                        position.Y = int.Parse(objectAttribute.Value);
+                        position = new Vector2(position.X, int.Parse(objectAttribute.Value));
                         break;
                     case "width":
                         width = int.Parse(objectAttribute.Value);
