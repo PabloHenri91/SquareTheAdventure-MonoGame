@@ -12,7 +12,7 @@ namespace Hydra
     public static class MemoryCardExtension
     {
 
-        public static PlayerData newPlayerData(this MemoryCard memoryCard)
+        internal static PlayerData newPlayerData(this MemoryCard memoryCard)
         {
             PlayerData playerData = memoryCard.insert<PlayerData>();
 

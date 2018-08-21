@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Hydra
 {
-    public class GameWorld : SKNode
+    class GameWorld : SKNode
     {
     }
 }
